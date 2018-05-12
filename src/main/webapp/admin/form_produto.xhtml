@@ -20,7 +20,7 @@
 				</p:messages>
 				<font></font>
 				<font></font>
-				<p:panelGrid columns="3" cellpadding="1">
+				<p:panelGrid columns="3" >
 				<h:outputLabel for="Nome" value="Nome:" style="font-weight:bold" />
 				<font></font>
 				<p:inputText id="nome" value="#{produtoCtrl.produto.nome}"
@@ -52,10 +52,6 @@
 				<br></br>
 				<p:commandButton value="Salvar" action="#{produtoCtrl.actionGravar}"
 					ajax="false" icon="ui-icon-check" validateClient="true"
-					style="margin-right:10px" />
-				<font></font>
-				<p:commandButton value="Listar Produtos"
-					action="/admin/lista_produto" ajax="fase" validateClient="true"
 					style="margin-right:10px" />
 				<font></font>
 
