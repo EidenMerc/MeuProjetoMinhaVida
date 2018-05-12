@@ -10,7 +10,7 @@
 		<intercept-url pattern="/admin/**" access="ROLE_ADMINISTRADOR" /> 
 		<form-login login-page="/publico/login.xhtml" 
 			always-use-default-target="true" 
-			default-target-url="/admin/template.xhtml"
+			default-target-url="/publico/index.xhtml"
 			authentication-failure-url="/publico/login.xhtml?login_error=1" />
 		<logout logout-success-url="/publico/index.xhtml"/> 
 		<remember-me /> 

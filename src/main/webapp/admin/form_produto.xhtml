@@ -1,41 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/publico/template.xhtml">
+	<br></br>
+	<body>
+		<h:form id="CadProd">
 
-<h:head>
-	<title>Cadastro de Produtos</title>
-</h:head>
-<h:body>
-	<h:form id="CadProd">
+			<font></font>
+			<p:panel header="Cadastro de Produtos">
+				<font></font>
+				<p:messages>
+					<font></font>
 
-		<div align="center">
-			<p:commandButton value="visualizar lista" update="CadProd"
-				action="/admin/lista_produto">
-			</p:commandButton>
-			<p:panelGrid columns="2">
-				<f:facet name="header">
-					<h:outputLabel value="Cadastro de Produtos" />
-				</f:facet>
-				<p:outputLabel value="Código" />
-				<p:inputText readonly="true" value="#{produtoCtrl.produto.id}" />
-				<p:outputLabel value="Nome" />
-				<p:inputText value="#{produtoCtrl.produto.nome}" />
-				<p:outputLabel value="Preço" />
-				<p:inputText value="#{produtoCtrl.produto.preco}">
-					<f:validateDoubleRange minimum="0.0" />
-				</p:inputText>
-			</p:panelGrid>
+					<font></font>
+				</p:messages>
+				<font></font>
+				<font></font>
+				<p:panelGrid columns="3" cellpadding="1">
+				<h:outputLabel for="Nome" value="Nome:" style="font-weight:bold" />
+				<font></font>
+				<p:inputText id="nome" value="#{produtoCtrl.produto.nome}"
+					required="true" requiredMessage="Campo Obrigatorio" label="Nome"
+					update="CadProd" />
+				<font></font>
+				<p:message for="nome" />
+				<font></font>
+				<font></font>
+				<h:outputLabel for="Preço" value="Preço" style="font-weight:bold" />
+				<font></font>
+				<p:inputText id="preco" value="#{produtoCtrl.produto.preco}"
+					required="true" requiredMessage="Campo Obrigatorio" label="Nome"
+					update="CadProd" />
+				<font></font>
+				<p:message for="preco" />
+				<font></font>
+				<font></font>
+				<h:outputLabel for="Codigo" value="Codigo" style="font-weight:bold" />
+				<font></font>
+				<p:inputText id="codigo" value="#{produtoCtrl.produto.id}"
+					required="true" label="Codigo" update="CadProd" />
+				<font></font>
+				<p:message for="codigo" />
+				<font></font>
+				</p:panelGrid>
+				<font></font>
+				<font></font>
+				<br></br>
+				<p:commandButton value="Salvar" action="#{produtoCtrl.actionGravar}"
+					ajax="false" icon="ui-icon-check" validateClient="true"
+					style="margin-right:10px" />
+				<font></font>
+				<p:commandButton value="Listar Produtos"
+					action="/admin/lista_produto" ajax="fase" validateClient="true"
+					style="margin-right:10px" />
+				<font></font>
 
-			<p:commandButton value="Salvar" update="CadProd"
-				action="#{produtoCtrl.actionGravar}">
-			</p:commandButton>
-
-		</div>
-
-	</h:form>
-</h:body>
-</html>
+			</p:panel>
+			<br></br>
+			<br></br>
+		</h:form>
+	</body>
+</ui:decorate>
