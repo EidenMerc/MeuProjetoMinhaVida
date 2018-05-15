@@ -20,11 +20,11 @@
             Produtos no Estoque
         </f:facet>
 <!-- a parte de baixo da nome as sub-tabelas -->
-					<p:panel header="#{produtoCtrl.produto.id}" style="text-align:center">
+					<p:panel header="#{car.nome}" style="text-align:center">
 						<h:panelGrid columns="1" style="width:100%">
 
 
-							<h:outputText value="#{produtoCtrl.produto.preco}" />
+							<h:outputText value="#{car.preco}" />
 
 							<p:commandLink update=":form:carDetail"
 								oncomplete="PF('carDialog').show()" title="View Detail">
