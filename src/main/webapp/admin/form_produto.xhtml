@@ -20,32 +20,40 @@
 				</p:messages>
 				<font></font>
 				<font></font>
-				<p:panelGrid columns="3" >
-				<h:outputLabel for="Nome" value="Nome:" style="font-weight:bold" />
-				<font></font>
-				<p:inputText id="nome" value="#{produtoCtrl.produto.nome}"
-					required="true" requiredMessage="Campo Obrigatorio" label="Nome"
-					update="CadProd" />
-				<font></font>
-				<p:message for="nome" />
-				<font></font>
-				<font></font>
-				<h:outputLabel for="Preço" value="Preço" style="font-weight:bold" />
-				<font></font>
-				<p:inputText id="preco" value="#{produtoCtrl.produto.preco}"
-					required="true" requiredMessage="Campo Obrigatorio" label="Nome"
-					update="CadProd" />
-				<font></font>
-				<p:message for="preco" />
-				<font></font>
-				<font></font>
-				<h:outputLabel for="Codigo" value="Codigo" style="font-weight:bold" />
-				<font></font>
-				<p:inputText id="codigo" value="#{produtoCtrl.produto.id}"
-					required="true" label="Codigo" update="CadProd" />
-				<font></font>
-				<p:message for="codigo" />
-				<font></font>
+				<p:panelGrid columns="3">
+					<h:outputLabel for="Nome" value="Nome:" style="font-weight:bold" />
+					<font></font>
+					<p:inputText id="nome" value="#{produtoCtrl.produto.nome}"
+						required="true" requiredMessage="Campo Obrigatorio" label="Nome"
+						update="CadProd" />
+					<font></font>
+					<p:message for="nome" />
+					<font></font>
+					<font></font>
+					<h:outputLabel for="Preço" value="Preço" style="font-weight:bold" />
+					<font></font>
+					<p:inputText id="preco" value="#{produtoCtrl.produto.preco}"
+						required="true" requiredMessage="Campo Obrigatorio" label="Nome"
+						update="CadProd" />
+					<font></font>
+					<p:message for="preco" />
+					<font></font>
+					<font></font>
+					<font></font>
+					<p:inputText id="caminho" value="#{produtoCtrl.produto.caminho}"
+						required="true" requiredMessage="Campo Obrigatorio" label="Nome"
+						update="CadProd" />
+					<font></font>
+					<p:message for="caminho" />
+					<font></font>
+					<font></font>
+					<h:outputLabel for="Codigo" value="Codigo" style="font-weight:bold" />
+					<font></font>
+					<p:inputText id="codigo" value="#{produtoCtrl.produto.id}"
+						required="true" label="Codigo" update="CadProd" />
+					<font></font>
+					<p:message for="codigo" />
+					<font></font>
 				</p:panelGrid>
 				<font></font>
 				<font></font>

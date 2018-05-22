@@ -20,6 +20,9 @@ public class Produto implements Serializable{
 
 	@Column(name = "pro_preco", nullable = false)
 	private float preco;
+	
+	@Column(name = "pro_caminho")
+	private String caminho;
 
 	public int getId() {
 		return id;
@@ -44,7 +47,15 @@ public class Produto implements Serializable{
 	public void setPreco(float preco) {
 		this.preco = preco;
 	}
-	
+		
+	public String getCaminho() {
+		return caminho;
+	}
+
+	public void setCaminho(String caminho) {
+		this.caminho = caminho;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
