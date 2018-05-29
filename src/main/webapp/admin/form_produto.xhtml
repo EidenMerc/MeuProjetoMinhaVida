@@ -11,50 +11,42 @@
 		<h:form id="CadProd">
 
 			<font></font>
-			<p:panel header="Cadastro de Produtos">
+			<p:panel header="Cadastro de Produtos" enctype="multipart/form-data">
 				<font></font>
 				<p:messages>
-					<font></font>
 
-					<font></font>
 				</p:messages>
-				<font></font>
-				<font></font>
 				<p:panelGrid columns="3">
 					<h:outputLabel for="Nome" value="Nome:" style="font-weight:bold" />
-					<font></font>
 					<p:inputText id="nome" value="#{produtoCtrl.produto.nome}"
 						required="true" requiredMessage="Campo Obrigatorio" label="Nome"
 						update="CadProd" />
-					<font></font>
 					<p:message for="nome" />
-					<font></font>
-					<font></font>
 					<h:outputLabel for="Preço" value="Preço" style="font-weight:bold" />
-					<font></font>
 					<p:inputText id="preco" value="#{produtoCtrl.produto.preco}"
 						required="true" requiredMessage="Campo Obrigatorio" label="Nome"
 						update="CadProd" />
-					<font></font>
 					<p:message for="preco" />
-					<font></font>
-					<font></font>
-					<font></font>
 					<h:outputLabel for="Codigo" value="Codigo" style="font-weight:bold" />
-					<font></font>
 					<p:inputText id="codigo" value="#{produtoCtrl.produto.id}"
 						required="true" label="Codigo" update="CadProd" />
-					<font></font>
 					<p:message for="codigo" />
-					<font></font>
+					<h:outputLabel for="Categoria" value="Categoria" style="font-weight:bold" />
+					<p:inputText id="Categoria" value="#{produtoCtrl.produto.caminho}"
+						required="true" label="Categoria" update="CadProd" />
+					<p:message for="Categoria" />
 				</p:panelGrid>
-				<font></font>
-				<font></font>
 				<br></br>
-				<p:commandButton value="Salvar" action="#{produtoCtrl.actionGravar}"
-					ajax="false" icon="ui-icon-check" validateClient="true"
+				<p:commandButton value="Salvar Produto"
+					action="#{produtoCtrl.actionGravar}" ajax="false"
+					icon="ui-icon-check" validateClient="true"
 					style="margin-right:10px" />
-				<font></font>
+				<p:commandButton value="Salvar Imagem"
+					action="#{produtoCtrl.salvar}" ajax="false" icon="ui-icon-check"
+					validateClient="true" style="margin-right:10px" />
+				<p:outputLabel for="Pesquisar" />
+				<p:fileUpload id="Pesquisar" mode="advanced"
+					fileUploadListener="#{produtoCtrl.upload}" auto="true" />
 
 			</p:panel>
 			<br></br>

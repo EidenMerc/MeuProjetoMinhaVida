@@ -23,8 +23,9 @@
 					<p:panel header="#{car.nome}" style="text-align:center">
 						<h:panelGrid columns="1" style="width:100%">
 
-							<h:outputText value="#{car.caminho}" />
 							<h:outputText value="#{car.preco}" />
+							<p:graphicImage value="/resources/imagens/#{car.caminho}.jpg"
+								width="200" />
 
 							<p:commandLink update=":form:carDetail"
 								oncomplete="PF('comprar').show()" title="burro">
@@ -48,20 +49,8 @@
 					modal="true" showEffect="fade" hideEffect="fade" resizable="false">
 					<p:outputPanel id="carDetail" style="text-align:center;">
 						<p:panelGrid style="=text-align: left">
-							<p:steps>
-								<p:menuitem value="Personal" />
-								<p:menuitem value="Seat Selection" />
-								<p:menuitem value="Payment" />
-								<p:menuitem value="Confirmation" />
-							</p:steps>
 
-							<h3>Interactive</h3>
-							<p:steps activeIndex="1" styleClass="custom" readonly="false">
-								<p:menuitem value="Personal" url="#" />
-								<p:menuitem value="Seat Selection" url="#" />
-								<p:menuitem value="Payment" url="#" />
-								<p:menuitem value="Confirmation" url="#" />
-							</p:steps>
+
 
 							<style type="text/css">
 .ui-steps .ui-steps-item {
