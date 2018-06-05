@@ -36,12 +36,11 @@
 							<p:graphicImage value="/resources/imagens/#{car.caminho}.jpg"
 								width="200" />
 
-							<p:commandLink update=":form:carDetail"
-								oncomplete="PF('comprar').show()" title="burro">
-								<h:commandButton value="add carrinho" style="margin: auto;" />
-								<f:setPropertyActionListener value="#{Produto}"
-									target="#{produtoCtrl}" />
-							</p:commandLink>
+							<p:commandButton update=":form:carDetail" actionListener="#{carrinhoCtrl.novoProduto}" title="add carrinho">
+
+								<p:collector value="#{produto}"
+									addTo="#{carrinhoCtrl.carrinho.produto}"/>
+							</p:commandButton>
 							<p:commandLink update=":form:carDetail"
 								oncomplete="PF('carDialog').show()" title="esperto">
 								<h:outputText styleClass="ui-icon ui-icon-search"
@@ -59,6 +58,10 @@
 					<p:outputPanel id="carDetail" style="text-align:center;">
 						<p:panelGrid style="=text-align: left">
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida.git
 
 
 						</p:panelGrid>
