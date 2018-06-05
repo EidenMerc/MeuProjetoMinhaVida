@@ -7,7 +7,8 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import beans.Produto;
+import beans.*;
+import persistencia.*;
 
 public class ProdutoDAO implements Serializable {
 
@@ -51,4 +52,23 @@ public class ProdutoDAO implements Serializable {
 		sessao.close();
 		return lista;
 	}
+	
+/*	public Produto merge(Produto produto) {
+		Session sessao = HibernateUtil.getSessionfactory().openSession();
+		Transaction transacao = null;
+		
+		try {
+			transacao = sessao.beginTransaction();
+			Produto retorno = (Produto) sessao.merge(produto);
+			transacao.commit();
+			return retorno;
+		}catch(RuntimeException erro) {
+			if(transacao != null) {
+				transacao.rollback();
+			}
+			throw erro;
+		}finally {
+			sessao.close();
+		}
+	}*/
 }
