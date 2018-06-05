@@ -1,0 +1,59 @@
+@CHARSET "ISO-8859-1";
+
+
+/* Estyle botão pesquisa */
+.pesquisa{
+	widht: 250px;
+	height:50px;
+	margin-top: -65px;
+	margin-left: 350px;
+}
+#texto{
+	widht:90px;
+	height:30px;
+	float: left;
+	font-family:'Arial';
+	font-size:20px;
+}
+.btn{
+	widht:20px;
+	height:20px;
+	background-color: #2f4550;
+	padding: 5px 10px;
+	cursor:pointer;
+}
+
+body{
+	background-color:;
+}
+
+ /*Style menu navegação*/
+ 
+body .navbar{
+	overflow: hidden;
+	background-color:#0B3861;
+	position: relative;
+	widht: 100%;
+}
+
+body .navbar a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align:center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+body .navbar a:hover{
+	background:;
+	color:#FE642E;
+}
+body .main{
+	margin-top:30px;
+}
+body #linha{
+	background-color: #FE642E;
+	color:#FE642E;
+	size:50px;
+}
