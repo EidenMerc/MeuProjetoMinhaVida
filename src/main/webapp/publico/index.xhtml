@@ -18,18 +18,12 @@
 		<div align="center">
 
 			<h:form id="form">
-				<p:dataGrid var="car" value="#{produtoCtrl.listagem}" columns="3"
-					layout="grid" rows="12" paginator="true" id="Produto"
-					paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
-					rowsPerPageTemplate="6,12,16">
+				<p:dataGrid var="car" value="#{produtoCtrl.listagem}" columns="2" cellpadding="2">
+
 					
-					<!-- 
-					<f:facet name="header">
-            		Produtos no Estoque
-       				 </f:facet>
-       				-->
+					
 					<!-- a parte de baixo da nome as sub-tabelas -->
-					<p:panel header="#{car.nome}" style="text-align:center">
+					<p:panel header="" style="text-align:center">
 						<h:panelGrid columns="1" style="width:100%">
 
 							<h:outputText value="#{car.preco}" />
@@ -41,13 +35,7 @@
 								<p:collector value="#{produto}"
 									addTo="#{carrinhoCtrl.carrinho.produto}"/>
 							</p:commandButton>
-							<p:commandLink update=":form:carDetail"
-								oncomplete="PF('carDialog').show()" title="esperto">
-								<h:outputText styleClass="ui-icon ui-icon-search"
-									style="margin:0 auto;" />
-								<f:setPropertyActionListener value="#{Produto}"
-									target="#{produtoCtrl}" />
-							</p:commandLink>
+							
 						</h:panelGrid>
 					</p:panel>
 

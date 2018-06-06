@@ -10,13 +10,13 @@
 	<body>
 		<h:form id="CadProd">
 
-			<font></font>
+			
 			<p:panel header="Cadastro de Produtos" enctype="multipart/form-data">
-				<font></font>
+				
 				<p:messages>
 
 				</p:messages>
-				<p:panelGrid columns="3">
+				<p:panelGrid columns="1" cellpadding="2">
 					<h:outputLabel for="Nome" value="Nome:" style="font-weight:bold" />
 					<p:inputText id="nome" value="#{produtoCtrl.produto.nome}"
 						required="true" requiredMessage="Campo Obrigatorio" label="Nome"
@@ -27,13 +27,8 @@
 						required="true" requiredMessage="Campo Obrigatorio" label="Nome"
 						update="CadProd" />
 					<p:message for="preco" />
-					<font></font>
-					<font></font>
-					<font></font>
-
 					
-					<font></font>
-					<font></font>
+				
 
 					<h:outputLabel for="Codigo" value="Codigo" style="font-weight:bold" />
 					<p:inputText id="codigo" value="#{produtoCtrl.produto.id}"
