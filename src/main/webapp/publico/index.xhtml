@@ -9,7 +9,11 @@
 	template="/publico/template.xhtml">
 
 	<h:head>
+<<<<<<< HEAD
 		<link href="../css/template.css" rel="stylesheet" type="text/css"></link>
+=======
+		<link href="../css/home.css" rel="stylesheet" type="text/css"></link>
+>>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida.git
 
 	</h:head>
 
@@ -25,6 +29,7 @@
 
 					<h:panelGrid columns="3">
 
+<<<<<<< HEAD
 						<h:outputText value="#{car.preco}" />
 						<p:graphicImage value="/resources/imagens/#{car.caminho}.jpg"
 							width="200" />
@@ -37,6 +42,51 @@
 
 					</h:panelGrid>
 
+=======
+						<p:graphicImage class="container-imagem"
+							value="/resources/imagens/#{car.caminho}.jpg" />
+
+
+
+
+					</h:panelGrid>
+
+					<p:panelGrid>
+						<p:outputLabel value="Produto: " />
+						<h:outputText value="#{car.nome}" />
+					</p:panelGrid>
+					<br />
+					<p:panelGrid>
+						<p:outputLabel value="Preço: R$" />
+						<h:outputText value="#{car.preco}" />
+					</p:panelGrid>
+					<br />
+					<p:panelGrid>
+						<p:outputLabel value="Codigo: " />
+						<h:outputText value="#{car.id}" />
+					</p:panelGrid>
+					<br/>
+					<p:scrollPanel  style="width:650px;color:#0B3861;height:100px;border:none">
+					<div  class="descricaoproduto">
+					<p:panelGrid cellpadding="2">
+						<p:outputLabel value="Detalhes: "/>
+						<h:outputText value="#{car.descricaoproduto}"/>
+					</p:panelGrid>
+					</div>
+					</p:scrollPanel>
+					<br/>
+					
+					<div class="btn-carrinho">
+						<p:commandButton class="btn-clickcarrinho"
+							update=":form:carDetail"
+							actionListener="#{carrinhoCtrl.novoProduto}" title="COMPRAR">
+
+							<p:collector value="#{produto}"
+								addTo="#{carrinhoCtrl.carrinho.produto}" />
+						</p:commandButton>
+					</div>
+				
+>>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida.git
 
 				</p:dataGrid>
 

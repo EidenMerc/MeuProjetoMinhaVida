@@ -10,27 +10,59 @@
 	<body>
 		<h:form id="CadProd">
 
-			<font></font>
+			
 			<p:panel header="Cadastro de Produtos" enctype="multipart/form-data">
+<<<<<<< HEAD
 				<p:panelGrid columns="2">
+=======
+				
+				<p:messages>
+
+				</p:messages>
+				<p:panelGrid columns="1" cellpadding="2">
+>>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida.git
 					<h:outputLabel for="Nome" value="Nome:" style="font-weight:bold" />
 					<p:inputText id="nome" value="#{produtoCtrl.produto.nome}"
 						required="true" requiredMessage="Campo Obrigatorio" label="Nome"
 						update="CadProd" />
+<<<<<<< HEAD
 
+=======
+					<p:message for="nome" />
+					
+>>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida.git
 					<h:outputLabel for="Preço" value="Preço" style="font-weight:bold" />
 					<p:inputText id="preco" value="#{produtoCtrl.produto.preco}"
 						required="true" requiredMessage="Campo Obrigatorio" label="Nome"
 						update="CadProd" />
+<<<<<<< HEAD
 
+=======
+					<p:message for="preco" />
+					
+>>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida.git
 					<h:outputLabel for="Codigo" value="Codigo" style="font-weight:bold" />
 					<p:inputText id="codigo" value="#{produtoCtrl.produto.id}"
 						required="true" label="Codigo" update="CadProd" />
+<<<<<<< HEAD
 
 					<h:outputLabel for="Categoria" value="Categoria"
 						style="font-weight:bold" />
+=======
+					<p:message for="codigo" />
+					
+					<h:outputLabel for="Categoria" value="Categoria" style="font-weight:bold" />
+>>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida.git
 					<p:inputText id="Categoria" value="#{produtoCtrl.produto.caminho}"
 						required="true" label="Categoria" update="CadProd" />
+<<<<<<< HEAD
+=======
+					<p:message for="Categoria" />
+					
+					<p:outputLabel for="descricao" value="Descrição:"/>
+					<p:inputTextarea id="descricao" value="#{produtoCtrl.produto.descricaoproduto}" required="true" label="descrição" update="CadProd"/>
+					<p:message for="Categoria"/>
+>>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida.git
 				</p:panelGrid>
 				<br></br>
 

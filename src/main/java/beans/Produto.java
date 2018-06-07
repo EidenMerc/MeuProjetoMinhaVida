@@ -23,6 +23,9 @@ public class Produto implements Serializable{
 	
 	@Column(name = "pro_caminho")
 	private String caminho;
+	
+	@Column(name="pro_descricao", nullable = false)
+	private String descricaoproduto;
 
 	public int getId() {
 		return id;
@@ -54,6 +57,12 @@ public class Produto implements Serializable{
 
 	public void setCaminho(String caminho) {
 		this.caminho = caminho;
+	}
+	public void setDescricaoproduto(String descricaoproduto){
+		this.descricaoproduto = descricaoproduto;
+	}
+	public String getDescricaoproduto(){
+		return descricaoproduto;
 	}
 
 	@Override
