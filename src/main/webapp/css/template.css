@@ -25,9 +25,8 @@
 }
 
 #carrinhocompras {
-	margin-top: 250px;
+	margin-top: 19px;
 	position: fixed;
-	top: -200px;
 	width: 70spx;
 	z-index: 100;
 	right: 40pt;

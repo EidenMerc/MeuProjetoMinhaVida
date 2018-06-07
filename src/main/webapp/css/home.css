@@ -1,0 +1,25 @@
+@CHARSET "ISO-8859-1";
+
+
+.container-imagem{
+	
+	width: 150px;
+	height:100px;
+	border: 1px solid #ddd;
+    border-radius: 4px;
+   
+	
+}
+
+.btn-clickcarrinho{
+	width: 150px;
+	height:40px;
+}
+.container-desc-produtos{
+
+	
+}
+.descricaoproduto{
+	width: 20px;
+	height:;
+}

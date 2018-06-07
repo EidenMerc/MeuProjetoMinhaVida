@@ -22,22 +22,26 @@
 						required="true" requiredMessage="Campo Obrigatorio" label="Nome"
 						update="CadProd" />
 					<p:message for="nome" />
+					
 					<h:outputLabel for="Preço" value="Preço" style="font-weight:bold" />
 					<p:inputText id="preco" value="#{produtoCtrl.produto.preco}"
 						required="true" requiredMessage="Campo Obrigatorio" label="Nome"
 						update="CadProd" />
 					<p:message for="preco" />
 					
-				
-
 					<h:outputLabel for="Codigo" value="Codigo" style="font-weight:bold" />
 					<p:inputText id="codigo" value="#{produtoCtrl.produto.id}"
 						required="true" label="Codigo" update="CadProd" />
 					<p:message for="codigo" />
+					
 					<h:outputLabel for="Categoria" value="Categoria" style="font-weight:bold" />
 					<p:inputText id="Categoria" value="#{produtoCtrl.produto.caminho}"
 						required="true" label="Categoria" update="CadProd" />
 					<p:message for="Categoria" />
+					
+					<p:outputLabel for="descricao" value="Descrição:"/>
+					<p:inputTextarea id="descricao" value="#{produtoCtrl.produto.descricaoproduto}" required="true" label="descrição" update="CadProd"/>
+					<p:message for="Categoria"/>
 				</p:panelGrid>
 				<br></br>
 				<p:commandButton value="Salvar Produto"
