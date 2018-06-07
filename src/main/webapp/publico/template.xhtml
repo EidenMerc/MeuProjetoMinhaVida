@@ -5,16 +5,9 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-
 <h:head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<<<<<<< HEAD
-	<link href="/css/style.css" rel="Stylesheet" />
-	<title>Virtual Store</title>
-
-
-=======
 	<link href="../css/template.css" rel="stylesheet" type="text/css"></link>
 	<img src="../resources/imagens/loja.png" alt="lojavirtual"></img>
 	
@@ -22,16 +15,16 @@
 	<input type="search" id="texto" placeholder="Buscar..."/>
 	<img src="../resources/imagens/lupa.png" class="btn"/>
 	
+	
 	</form>
 	
->>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida.git
+	<div id="carrinhocompras">
+	<a href="Carrinho.xhtml"><img src="../resources/imagens/carrinhocompras.png" width="50" height="50"></img></a>
+	
+	</div>
+	
 </h:head>
 
-<<<<<<< HEAD
-<h:body>
-	<h1 id="text-loja">Virtual Store</h1>
-	<hr />
-=======
 <h:body><br></br>
 	
 	
@@ -43,17 +36,14 @@
 		<a href="../publico/form_cadusuario.xhtml">Cadastro de Usuários</a>
 			
 	</div>
->>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida.git
 
 <!-- 
 	<p:menubar>
 		<p:menuitem value="Home" url="/publico/index.xhtml"></p:menuitem>
 		<p:menuitem value="Lista de Produtos" url="/admin/lista_produto.xhtml"></p:menuitem>
 		<p:menuitem value="Lista de Usuarios" url="/admin/lista_pessoa.xhtml"></p:menuitem>
-		<p:menuitem value="Cadastro de Produtos"
-			url="/admin/form_produto.xhtml"></p:menuitem>
-		<p:menuitem value="Cadastro de Usuarios"
-			url="/publico/form_cadusuario.xhtml"></p:menuitem>
+		<p:menuitem value="Cadastro de Produtos" url="/admin/form_produto.xhtml"></p:menuitem>
+		<p:menuitem value="Cadastro de Usuarios" url="/publico/form_cadusuario.xhtml"></p:menuitem>
 	</p:menubar>
  -->
  
@@ -63,6 +53,7 @@
 	 
 	<ui:insert>
 	</ui:insert>
+		
 
 </h:body>
 </html>
