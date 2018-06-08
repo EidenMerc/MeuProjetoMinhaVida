@@ -25,6 +25,10 @@
 }
 
 #carrinhocompras {
+
+	margin-top: 250px;
+	position: fixed;
+	top: -200px;
 	margin-top: 19px;
 	position: fixed;
 	width: 70spx;

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" template="/publico/template.xhtml">
+<h:head>
+
+	<title>Carrinho</title>
+</h:head>
+<h:body>
+	<h1>
+		<h:outputText value="carrinho" />
+	</h1>
+	<h:form prependId="false">
+		<div align="center">
+			<p:dataTable id="dataTableProduto"
+				value="#{carrinhoCtrl.pedido.pedidos}" var="pedido">
+				<p:column headerText="Id">
+					<h:outputText value="#{pedido.pro_id.id}" />
+				</p:column>
+
+				<p:column headerText="Nome do Produto">
+					<h:outputText value="#{pedido.pro_id.nome}" />
+				</p:column>
+
+				<p:column headerText="Valor do Produto">
+					<h:outputText value="#{pedido.pro_id.preco}" />
+				</p:column>
+
+				<p:column headerText="Ações">
+				</p:column>
+				<h:column>
+
+				</h:column>
+
+			</p:dataTable>
+		</div>
+	</h:form>
+
+</h:body>
+</html>

@@ -7,40 +7,71 @@
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link href="../css/login.css" rel="stylesheet" type="text/css"></link>
+	<link href="../css/login.css" rel="stylesheet" type="text/css"></link>
+	<link href="../css/login.css" rel="stylesheet" type="text/css"></link>
 	<title>Login</title>
 </h:head>
 
+
+
+<h:panelGroup rendered="#{!empty param.login_error}">
+=======
 	
 	
 	<h:panelGroup rendered="#{!empty param.login_error}">
 		Erro ao efetuar o login.<br />
 		Motivo: #{SPRING_SECURITY_LAST_ESCEPTION.message}
 	</h:panelGroup>
-	
-<h:body>
-	
-	<div class="container">
-	<img src="../resources/imagens/account.png"></img>
-	
-	<form id="login" method="post" action="#{request.contextPath}/j_spring_security_check">
-	
-	<div class="form-input">
-		<input type='username' name='j_username' placeholder="Enter Username" icon="user"/>
-	</div>
-	<div class="form-input">
-		<a><input type='password' name='j_password' placeholder="Enter Password"/>
-		<span class="user"></span>
-		</a>
-		<p>Lembra usuário?</p>
-	<input type="checkbox" name="_spring_security_remember_me"/>
-	</div>
-		<input type="submit" name="Enviar" value="Login" class="bnt-login" />
-	<script>
-		document.getElementById("login").j_username.value = "#{SPRING_SECURITY_LAST_USERNAME}";
-	</script>
-	</form>
-	
-	</div>
-</h:body>
+
+	<h:body>
+
+		<div class="container">
+			<img src="../resources/imagens/account.png"></img>
+
+			<form id="login" method="post"
+				action="#{request.contextPath}/j_spring_security_check">
+
+				<div class="form-input">
+					<input type='username' name='j_username'
+						placeholder="Enter Username" />
+				</div>
+				<div class="form-input">
+					<input type='password' name='j_password'
+						placeholder="Enter Password" />
+					<p>Lembra usuário?</p>
+					<input type="checkbox" name="_spring_security_remember_me" />
+				</div>
+				<input type="submit" name="Enviar" value="Login" class="bnt-login" />
+				<script>
+					document.getElementById("login").j_username.value = "#{SPRING_SECURITY_LAST_USERNAME}";
+				</script>
+			</form>
+
+
+			<h:body>
+
+				<div class="container">
+					<img src="../resources/imagens/account.png"></img>
+
+					<form id="login" method="post"
+						action="#{request.contextPath}/j_spring_security_check">
+
+						<div class="form-input">
+							<input type='username' name='j_username'
+								placeholder="Enter Username" icon="user" />
+						</div>
+						<div class="form-input">
+							<a><input type='password' name='j_password'
+								placeholder="Enter Password" /> <span class="user"></span> </a>
+							<p>Lembra usuário?</p>
+							<input type="checkbox" name="_spring_security_remember_me" />
+						</div>
+						<input type="submit" name="Enviar" value="Login" class="bnt-login" />
+						<script>
+							document.getElementById("login").j_username.value = "#{SPRING_SECURITY_LAST_USERNAME}";
+						</script>
+					</form>
+
+				</div>
+			</h:body>
 </html>

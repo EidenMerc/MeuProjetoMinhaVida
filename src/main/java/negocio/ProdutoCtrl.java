@@ -57,7 +57,7 @@ public class ProdutoCtrl implements Serializable {
 			return actionInserir();
 		} else {
 			ProdutoDAO.alterar(produto);
-			return "/admin/lista_produto";
+			return "/admin/form_produto";
 		}
 	}
 	public String actionInserir() {
