@@ -121,6 +121,7 @@ public class Pedido {
 	public void setPedidos(List<Itens_pedido> pedidos) {
 		this.pedidos = pedidos;
 	}
+
 	
 	
 }
