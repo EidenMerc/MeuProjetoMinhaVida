@@ -9,11 +9,10 @@
 	template="/publico/template.xhtml">
 
 	<h:head>
-<<<<<<< HEAD
 		<link href="../css/template.css" rel="stylesheet" type="text/css"></link>
-=======
+
 		<link href="../css/home.css" rel="stylesheet" type="text/css"></link>
->>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida.git
+
 
 	</h:head>
 
@@ -28,28 +27,14 @@
 
 
 					<h:panelGrid columns="3">
-
-<<<<<<< HEAD
 						<h:outputText value="#{car.preco}" />
-						<p:graphicImage value="/resources/imagens/#{car.caminho}.jpg"
-							width="200" />
-
 						<p:commandButton update=":form:carDetail"
 							actionListener="#{carrinhoCtrl.addCarrinho(car)}" title="add carrinho">
-
-		
 						</p:commandButton>
 
 					</h:panelGrid>
-
-=======
 						<p:graphicImage class="container-imagem"
 							value="/resources/imagens/#{car.caminho}.jpg" />
-
-
-
-
-					</h:panelGrid>
 
 					<p:panelGrid>
 						<p:outputLabel value="Produto: " />
@@ -85,8 +70,6 @@
 								addTo="#{carrinhoCtrl.carrinho.produto}" />
 						</p:commandButton>
 					</div>
-				
->>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida.git
 
 				</p:dataGrid>
 
@@ -94,10 +77,6 @@
 
 				</p:outputPanel>
 			</h:form>
-
-			<br></br> <br></br> <br></br> <br></br>
-
-
 
 		</div>
 		<footer align="center" id="footer">

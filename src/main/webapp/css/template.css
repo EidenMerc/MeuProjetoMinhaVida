@@ -25,14 +25,12 @@
 }
 
 #carrinhocompras {
-<<<<<<< HEAD
+
 	margin-top: 250px;
 	position: fixed;
 	top: -200px;
-=======
 	margin-top: 19px;
 	position: fixed;
->>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida.git
 	width: 70spx;
 	z-index: 100;
 	right: 40pt;

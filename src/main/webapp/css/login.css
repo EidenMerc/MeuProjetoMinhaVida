@@ -1,6 +1,5 @@
 @CHARSET "ISO-8859-1";
 
-<<<<<<< HEAD
 body {
 	margin: 0 auto;
 	background-image: url("../resources/imgens/sea.jpg");
@@ -63,7 +62,6 @@ input {
 a {
 	color: #fff;
 }
-=======
 body{
 			margin: 0 auto;
 			background-image: url("../resources/imgens/sea.jpg");
@@ -123,4 +121,3 @@ body{
 		a{
 			color:#fff;
 		}
->>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida.git
