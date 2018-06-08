@@ -4,8 +4,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui" 
-	template="/publico/template.xhtml">
+	xmlns:p="http://primefaces.org/ui" template="/publico/template.xhtml">
 <h:head>
 
 	<title>Carrinho</title>
@@ -25,7 +24,11 @@
 				<p:column headerText="Nome do Produto">
 					<h:outputText value="#{pedido.pro_id.nome}" />
 				</p:column>
-				
+
+				<p:column headerText="quantidade">
+					<h:outputText value="#{pedido.ipe_qtde}" />
+				</p:column>
+
 				<p:column headerText="Valor do Produto">
 					<h:outputText value="#{pedido.pro_id.preco}" />
 				</p:column>
