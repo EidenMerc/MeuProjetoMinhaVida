@@ -34,8 +34,7 @@ public class CarrinhoCtrl {
 
 	public void addCarrinho(Produto produto) {
 		Itens_pedido addcarrinho = new Itens_pedido();
-		listaProduto.add(prod);
-		this.prod = new Produto();
+
 		addcarrinho.setPro_id(produto);
 		addcarrinho.setIpe_qtde(1);
 		addcarrinho.setIpe_valorunit(produto.getPreco() * 1);
