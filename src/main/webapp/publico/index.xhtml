@@ -28,22 +28,16 @@
 
 					<h:panelGrid columns="3">
 						<h:outputText value="#{car.preco}" />
-						<p:commandButton update=":form:carDetail"
-							actionListener="#{carrinhoCtrl.addCarrinho(car)}" title="add carrinho">
+						<p:commandButton update="form"
+							actionListener="#{carrinhoCtrl.addCarrinho(car)}"
+							title="add carrinho">
 						</p:commandButton>
 
 					</h:panelGrid>
-						<p:graphicImage class="container-imagem"
-							value="/resources/imagens/#{car.caminho}.jpg" />
-
-<<<<<<< HEAD
+					<p:graphicImage class="container-imagem"
+						value="/resources/imagens/#{car.caminho}.jpg" />
 
 
-
-					</h:panelGrid>
-				
-=======
->>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida
 					<p:panelGrid>
 						<p:outputLabel value="Produto: " />
 						<h:outputText value="#{car.nome}" />
@@ -58,40 +52,33 @@
 						<p:outputLabel value="Codigo: " />
 						<h:outputText value="#{car.id}" />
 					</p:panelGrid>
-					<br/>
-					<p:scrollPanel style="width:450px;height:125px;color:#0B3861;border:none;">
-						<h:outputText value="#{car.descricaoproduto}"/>
+					<br />
+					<p:scrollPanel
+						style="width:450px;height:125px;color:#0B3861;border:none;">
+						<h:outputText value="#{car.descricaoproduto}" />
 					</p:scrollPanel>
-					
-					
+
+
 					<div class="btn-carrinho">
 						<p:commandButton class="btn-clickcarrinho"
-							update=":form:carDetail"
+							update="form"
 							actionListener="#{carrinhoCtrl.novoProduto}" title="COMPRAR">
 
 							<p:collector value="#{produto}"
 								addTo="#{carrinhoCtrl.carrinho.produto}" />
 						</p:commandButton>
-<<<<<<< HEAD
+
+
 					</div>
-				
-					
-=======
-					</div>
->>>>>>> branch 'master' of https://github.com/EidenMerc/MeuProjetoMinhaVida
 
 				</p:dataGrid>
-
-				<p:outputPanel id="carDetail" style="text-align:center;">
-
-				</p:outputPanel>
 			</h:form>
-
 		</div>
+
 		<footer style="text-align:center;">
 		<h5>Virtual Store 2.0</h5>
 		<h6>©2016 Todos os direitos reservados.</h6>
-		 </footer>
+		</footer>
 	</h:body>
 
 </ui:decorate>
