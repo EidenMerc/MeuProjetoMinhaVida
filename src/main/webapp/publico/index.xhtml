@@ -32,7 +32,7 @@
 
 
 					</h:panelGrid>
-
+				
 					<p:panelGrid>
 						<p:outputLabel value="Produto: " />
 						<h:outputText value="#{car.nome}" />
@@ -48,26 +48,19 @@
 						<h:outputText value="#{car.id}" />
 					</p:panelGrid>
 					<br/>
-					<p:scrollPanel  style="width:650px;color:#0B3861;height:100px;border:none">
-					<div  class="descricaoproduto">
-					<p:panelGrid cellpadding="2">
-						<p:outputLabel value="Detalhes: "/>
+					<p:scrollPanel style="width:450px;height:125px;color:#0B3861;border:none;">
 						<h:outputText value="#{car.descricaoproduto}"/>
-					</p:panelGrid>
-					</div>
 					</p:scrollPanel>
-					<br/>
+					
 					
 					<div class="btn-carrinho">
 						<p:commandButton class="btn-clickcarrinho"
 							update=":form:carDetail"
-							actionListener="#{carrinhoCtrl.novoProduto}" title="COMPRAR">
-
-							<p:collector value="#{produto}"
-								addTo="#{carrinhoCtrl.carrinho.produto}" />
+							actionListener="#{carrinhoCtrl.addCarrinho(car)}" title="COMPRAR">
 						</p:commandButton>
 					</div>
 				
+					
 
 				</p:dataGrid>
 
@@ -81,9 +74,10 @@
 
 
 		</div>
-		<footer align="center" id="footer">
+		<footer style="text-align:center;">
+		<h5>Virtual Store 2.0</h5>
 		<h6>©2016 Todos os direitos reservados.</h6>
-		<span>Virtual Store 2.0</span> </footer>
+		 </footer>
 	</h:body>
 
 </ui:decorate>

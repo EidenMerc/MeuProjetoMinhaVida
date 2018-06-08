@@ -1,32 +1,46 @@
 package negocio;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import beans.*;
+import negocio.*;
 
+@ManagedBean
+@ApplicationScoped
 public class CarrinhoCtrl {
-private Produto produto;
-private Carrinho carrinho;
+	private Produto prod = new Produto();
+	private Pedido pedido = new Pedido();
+	private List<Produto> listaProduto = new ArrayList<Produto>();
 
-public CarrinhoCtrl() {
-	this.carrinho = new Carrinho();
-}
+	public List<Produto> getListaProdutos() {
+		return listaProduto;
+	}
 
-public void novoProduto() {
-	this.produto = new Produto();
-}
-public Produto getProduto() {
-	return produto;
-}
+	public void setListaProdutos(List<Produto> listaProdutos) {
+		this.listaProduto = listaProdutos;
+	}
 
-public void setProduto(Produto produto) {
-	this.produto = produto;
-}
+	public Pedido getPedido() {
+		return pedido;
+	}
 
-public Carrinho getCarrinho() {
-	return carrinho;
-}
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
+	}
 
-public void setCarrinho(Carrinho carrinho) {
-	this.carrinho = carrinho;
-}
+	public void addCarrinho(Produto produto) {
+		Itens_pedido addcarrinho = new Itens_pedido();
 
+		addcarrinho.setPro_id(produto);
+		addcarrinho.setIpe_qtde(1);
+		addcarrinho.setIpe_valorunit(produto.getPreco() * 1);
+		addcarrinho.setIpe_subtotal(produto.getPreco() * 1);
+		addcarrinho.setPed_id(pedido);
+
+		pedido.getPedidos().add(addcarrinho);
+	}
 }
