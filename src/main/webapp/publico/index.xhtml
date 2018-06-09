@@ -6,7 +6,7 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	template="/publico/template.xhtml">
+	template="/templates/templatehome.xhtml">
 
 	<h:head>
 		<link href="../css/home.css" rel="stylesheet" type="text/css"></link>
@@ -14,7 +14,7 @@
 	</h:head>
 
 	<h:body>
-
+	
 		<div align="center">
 
 			<h:form id="form">
@@ -27,10 +27,6 @@
 
 						<p:graphicImage class="container-imagem"
 							value="/resources/imagens/#{car.caminho}.jpg" />
-
-
-
-
 					</h:panelGrid>
 				
 					<p:panelGrid>
@@ -54,9 +50,7 @@
 					
 					
 					<div class="btn-carrinho">
-						<p:commandButton class="btn-clickcarrinho"
-							update=":form:carDetail"
-							actionListener="#{carrinhoCtrl.addCarrinho(car)}" title="COMPRAR">
+						<p:commandButton class="btn-clickcarrinho" update=":form:carDetail" actionListener="#{carrinhoCtrl.addCarrinho(car)}" title="COMPRAR">
 						</p:commandButton>
 					</div>
 				

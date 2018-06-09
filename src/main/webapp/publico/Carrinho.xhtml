@@ -5,34 +5,28 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	template="/publico/template.xhtml">
+	template="/templates/templatecarrinho.xhtml">
 
 	<h:head>
 
-	<title>Carrinho</title>
+	<h1>CARRINHO DE COMPRAS</h1>
 </h:head>
 <h:body>
-	<h1>
-		<h:outputText value="carrinho" />
-	</h1>
+	
 	<h:form prependId="false">
 		<div align="center">
-			<p:dataTable id="dataTableProduto"
+			<p:dataTable id="dataTableProduto"	
 				value="#{carrinhoCtrl.pedido.pedidos}" var="pedido">
-				<p:column headerText="Id">
-					<h:outputText value="#{pedido.pro_id.id}" />
-				</p:column>
-
-				<p:column headerText="Nome do Produto">
+				<p:column headerText="PRODUTO">
 					<h:outputText value="#{pedido.pro_id.nome}" />
 				</p:column>
 
-				<p:column headerText="quantidade">
+				<p:column headerText="QUANTIDADE">
 					<h:outputText value="#{pedido.ipe_qtde}" />
 					<p:commandButton value="-" style="margin-left: 15%;" action="#{carrinho.remover(pedido.pro_id)}" update="@form" />
 				</p:column>
 
-				<p:column headerText="Valor do Produto">
+				<p:column headerText="VALOR">
 					<h:outputText value="#{pedido.pro_id.preco}" />
 				</p:column>
 

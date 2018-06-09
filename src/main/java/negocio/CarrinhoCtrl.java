@@ -9,6 +9,7 @@ import javax.faces.bean.SessionScoped;
 import beans.*;
 import negocio.*;
 
+
 @ManagedBean
 @ApplicationScoped
 public class CarrinhoCtrl {
@@ -43,4 +44,5 @@ public class CarrinhoCtrl {
 
 		pedido.getPedidos().add(addcarrinho);
 	}
+	
 }

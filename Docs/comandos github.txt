@@ -7,17 +7,17 @@ Consolidado (comitted);
 Ajuda
 Geral
 git help
-Comando específico
+Comando especï¿½fico
 git help add
 git help commit
 git help <qualquer_comando_git>
-Configuração
+Configuraï¿½ï¿½o
 Geral
-As configurações do GIT são armazenadas no arquivo .gitconfig localizado dentro do diretório do usuário do Sistema Operacional (Ex.: Windows: C:\Users\Documents and Settings\Leonardo ou *nix /home/leonardo).
+As configuraï¿½ï¿½es do GIT sï¿½o armazenadas no arquivo .gitconfig localizado dentro do diretï¿½rio do usuï¿½rio do Sistema Operacional (Ex.: Windows: C:\Users\Documents and Settings\Leonardo ou *nix /home/leonardo).
 
-As configurações realizadas através dos comandos abaixo serão incluídas no arquivo citado acima.
+As configuraï¿½ï¿½es realizadas atravï¿½s dos comandos abaixo serï¿½o incluï¿½das no arquivo citado acima.
 
-Setar usuário
+Setar usuï¿½rio
 git config --global user.name "Leonardo Comelli"
 Setar email
 git config --global user.email leonardo@software-ltda.com.br
@@ -27,131 +27,131 @@ Setar ferramenta de merge
 git config --global merge.tool vimdiff
 Setar arquivos a serem ignorados
 git config --global core.excludesfile ~/.gitignore
-Listar configurações
+Listar configuraï¿½ï¿½es
 git config --list
 Ignorar Arquivos
-Os nomes de arquivos/diretórios ou extensões de arquivos listados no arquivo .gitignore não serão adicionados em um repositório. Existem dois arquivos .gitignore, são eles:
+Os nomes de arquivos/diretï¿½rios ou extensï¿½es de arquivos listados no arquivo .gitignore nï¿½o serï¿½o adicionados em um repositï¿½rio. Existem dois arquivos .gitignore, sï¿½o eles:
 
-Geral: Normalmente armazenado no diretório do usuário do Sistema Operacional. O arquivo que possui a lista dos arquivos/diretórios a serem ignorados por todos os repositórios deverá ser declarado conforme citado acima. O arquivo não precisa ter o nome de .gitignore.
+Geral: Normalmente armazenado no diretï¿½rio do usuï¿½rio do Sistema Operacional. O arquivo que possui a lista dos arquivos/diretï¿½rios a serem ignorados por todos os repositï¿½rios deverï¿½ ser declarado conforme citado acima. O arquivo nï¿½o precisa ter o nome de .gitignore.
 
-Por repositório: Deve ser armazenado no diretório do repositório e deve conter a lista dos arquivos/diretórios que devem ser ignorados apenas para o repositório específico.
+Por repositï¿½rio: Deve ser armazenado no diretï¿½rio do repositï¿½rio e deve conter a lista dos arquivos/diretï¿½rios que devem ser ignorados apenas para o repositï¿½rio especï¿½fico.
 
-Repositório Local
-Criar novo repositório
+Repositï¿½rio Local
+Criar novo repositï¿½rio
 git init
-Verificar estado dos arquivos/diretórios
+Verificar estado dos arquivos/diretï¿½rios
 git status
-Adicionar arquivo/diretório (staged area)
-Adicionar um arquivo em específico
+Adicionar arquivo/diretï¿½rio (staged area)
+Adicionar um arquivo em especï¿½fico
 git add meu_arquivo.txt
-Adicionar um diretório em específico
+Adicionar um diretï¿½rio em especï¿½fico
 git add meu_diretorio
-Adicionar todos os arquivos/diretórios
+Adicionar todos os arquivos/diretï¿½rios
 git add .	
-Adicionar um arquivo que esta listado no .gitignore (geral ou do repositório)
+Adicionar um arquivo que esta listado no .gitignore (geral ou do repositï¿½rio)
 git add -f arquivo_no_gitignore.txt
-Comitar arquivo/diretório
+Comitar arquivo/diretï¿½rio
 Comitar um arquivo
 git commit meu_arquivo.txt
-Comitar vários arquivos
+Comitar vï¿½rios arquivos
 git commit meu_arquivo.txt meu_outro_arquivo.txt
 Comitar informando mensagem
 git commit meuarquivo.txt -m "minha mensagem de commit"
-Remover arquivo/diretório
+Remover arquivo/diretï¿½rio
 Remover arquivo
 git rm meu_arquivo.txt
-Remover diretório
+Remover diretï¿½rio
 git rm -r diretorio
-Visualizar hitórico
-Exibir histórico
+Visualizar hitï¿½rico
+Exibir histï¿½rico
 git log
-Exibir histórico com diff das duas últimas alterações
+Exibir histï¿½rico com diff das duas ï¿½ltimas alteraï¿½ï¿½es
 git log -p -2
-Exibir resumo do histórico (hash completa, autor, data, comentário e qtde de alterações (+/-))
+Exibir resumo do histï¿½rico (hash completa, autor, data, comentï¿½rio e qtde de alteraï¿½ï¿½es (+/-))
 git log --stat
-Exibir informações resumidas em uma linha (hash completa e comentário)
+Exibir informaï¿½ï¿½es resumidas em uma linha (hash completa e comentï¿½rio)
 git log --pretty=oneline
-Exibir histórico com formatação específica (hash abreviada, autor, data e comentário)
+Exibir histï¿½rico com formataï¿½ï¿½o especï¿½fica (hash abreviada, autor, data e comentï¿½rio)
 git log --pretty=format:"%h - %an, %ar : %s"
-%h: Abreviação do hash;
+%h: Abreviaï¿½ï¿½o do hash;
 %an: Nome do autor;
 %ar: Data;
-%s: Comentário.
-Verifique as demais opções de formatação no Git Book
+%s: Comentï¿½rio.
+Verifique as demais opï¿½ï¿½es de formataï¿½ï¿½o no Git Book
 
-Exibir histório de um arquivo específico
+Exibir histï¿½rio de um arquivo especï¿½fico
 git log -- <caminho_do_arquivo>
-Exibir histórico de um arquivo específico que contêm uma determinada palavra
+Exibir histï¿½rico de um arquivo especï¿½fico que contï¿½m uma determinada palavra
 git log --summary -S<palavra> [<caminho_do_arquivo>]
-Exibir histórico modificação de um arquivo
+Exibir histï¿½rico modificaï¿½ï¿½o de um arquivo
 git log --diff-filter=M -- <caminho_do_arquivo>
 O pode ser substituido por: Adicionado (A), Copiado (C), Apagado (D), Modificado (M), Renomeado (R), entre outros.
-Exibir histório de um determinado autor
+Exibir histï¿½rio de um determinado autor
 git log --author=usuario
-Exibir revisão e autor da última modificação de uma bloco de linhas
+Exibir revisï¿½o e autor da ï¿½ltima modificaï¿½ï¿½o de uma bloco de linhas
 git blame -L 12,22 meu_arquivo.txt 
-Desfazendo operações
-Desfazendo alteração local (working directory)
-Este comando deve ser utilizando enquanto o arquivo não foi adicionado na staged area.
+Desfazendo operaï¿½ï¿½es
+Desfazendo alteraï¿½ï¿½o local (working directory)
+Este comando deve ser utilizando enquanto o arquivo nï¿½o foi adicionado na staged area.
 
-git checkout -- meu_arquivo.txt
-Desfazendo alteração local (staging area)
-Este comando deve ser utilizando quando o arquivo já foi adicionado na staged area.
+git checkout --meu_arquivo.txt
+Desfazendo alteraï¿½ï¿½o local (staging area)
+Este comando deve ser utilizando quando o arquivo jï¿½ foi adicionado na staged area.
 
 git reset HEAD meu_arquivo.txt
-Se o resultado abaixo for exibido, o comando reset não alterou o diretório de trabalho.
+Se o resultado abaixo for exibido, o comando reset nï¿½o alterou o diretï¿½rio de trabalho.
 
-Unstaged changes after reset:
-M	meu_arquivo.txt
-A alteração do diretório pode ser realizada através do comando abaixo:
+Unstaged changes after reset: meu_arquivo.txt
+A alteraï¿½ï¿½o do diretï¿½rio pode ser realizada atravï¿½s do comando abaixo:
 
 git checkout meu_arquivo.txt
-Repositório Remoto
-Exibir os repositórios remotos
+Repositï¿½rio Remoto
+Exibir os repositï¿½rios remotos
 git remote
 
 git remote -v
-Vincular repositório local com um repositório remoto
+Vincular repositï¿½rio local com um repositï¿½rio remoto
 git remote add origin git@github.com:leocomelli/curso-git.git
-Exibir informações dos repositórios remotos
+Exibir informaï¿½ï¿½es dos repositï¿½rios remotos
 git remote show origin
-Renomear um repositório remoto
+Renomear um repositï¿½rio remoto
 git remote rename origin curso-git
-Desvincular um repositório remoto
+Desvincular um repositï¿½rio remoto
 git remote rm curso-git
-Enviar arquivos/diretórios para o repositório remoto
-O primeiro push de um repositório deve conter o nome do repositório remoto e o branch.
+Enviar arquivos/diretï¿½rios para o repositï¿½rio remoto
+O primeiro push de um repositï¿½rio deve conter o nome do repositï¿½rio remoto e o branch.
 
+git push  --  envia as alteraÃ§Ãµes para o repositorio no github
 git push -u origin master
-Os demais pushes não precisam dessa informação
+Os demais pushes nï¿½o precisam dessa informaï¿½ï¿½o
 
 git push
-Atualizar repositório local de acordo com o repositório remoto
+Atualizar repositï¿½rio local de acordo com o repositï¿½rio remoto
 Atualizar os arquivos no branch atual
 git pull
-Buscar as alterações, mas não aplica-las no branch atual
+Buscar as alteraï¿½ï¿½es, mas nï¿½o aplica-las no branch atual
 git fecth
-Clonar um repositório remoto já existente
+Clonar um repositï¿½rio remoto jï¿½ existente
 git clone git@github.com:leocomelli/curso-git.git
 Tags
 Criando uma tag leve
 git tag vs-1.1
 Criando uma tag anotada
-git tag -a vs-1.1 -m "Minha versão 1.1"
+git tag -a vs-1.1 -m "Minha versï¿½o 1.1"
 Criando uma tag assinada
-Para criar uma tag assinada é necessário uma chave privada (GNU Privacy Guard - GPG).
+Para criar uma tag assinada ï¿½ necessï¿½rio uma chave privada (GNU Privacy Guard - GPG).
 
 git tag -s vs-1.1 -m "Minha tag assinada 1.1"
 Criando tag a partir de um commit (hash)
 git tag -a vs-1.2 9fceb02
-Criando tags no repositório remoto
+Criando tags no repositï¿½rio remoto
 git push origin vs-1.2
-Criando todas as tags locais no repositório remoto
+Criando todas as tags locais no repositï¿½rio remoto
 git push origin --tags
 Branches
-O master é o branch principal do GIT.
+O master ï¿½ o branch principal do GIT.
 
-O HEAD é um ponteiro especial que indica qual é o branch atual. Por padrão, o HEAD aponta para o branch principal, o master.
+O HEAD ï¿½ um ponteiro especial que indica qual ï¿½ o branch atual. Por padrï¿½o, o HEAD aponta para o branch principal, o master.
 
 Criando um novo branch
 git branch bug-123
@@ -165,9 +165,9 @@ Voltar para o branch principal (master)
 git checkout master
 Resolver merge entre os branches
 git merge bug-123
-Para realizar o merge, é necessário estar no branch que deverá receber as alterações. O merge pode automático ou manual. O merge automático será feito em arquivos textos que não sofreram alterações nas mesmas linhas, já o merge manual será feito em arquivos textos que sofreram alterações nas mesmas linhas.
+Para realizar o merge, ï¿½ necessï¿½rio estar no branch que deverï¿½ receber as alteraï¿½ï¿½es. O merge pode automï¿½tico ou manual. O merge automï¿½tico serï¿½ feito em arquivos textos que nï¿½o sofreram alteraï¿½ï¿½es nas mesmas linhas, jï¿½ o merge manual serï¿½ feito em arquivos textos que sofreram alteraï¿½ï¿½es nas mesmas linhas.
 
-A mensagem indicando um merge manual será:
+A mensagem indicando um merge manual serï¿½:
 
 Automerging meu_arquivo.txt
 CONFLICT (content): Merge conflict in meu_arquivo.txt
@@ -177,18 +177,18 @@ git branch -d bug-123
 Listar branches
 Listar branches
 git branch
-Listar branches com informações dos últimos commits
+Listar branches com informaï¿½ï¿½es dos ï¿½ltimos commits
 git branch -v
-Listar branches que já foram fundidos (merged) com o master
+Listar branches que jï¿½ foram fundidos (merged) com o master
 git branch --merged
-Listar branches que não foram fundidos (merged) com o master
+Listar branches que nï¿½o foram fundidos (merged) com o master
 git branch --no-merged
-Criando branches no repositório remoto
+Criando branches no repositï¿½rio remoto
 Criando um branch remoto com o mesmo nome
 git push origin bug-123
 Criando um branch remoto com nome diferente
 git push origin bug-123:new-branch
-Baixar um branch remoto para edição
+Baixar um branch remoto para ediï¿½ï¿½o
 git checkout -b bug-123 origin/bug-123
 Apagar branch remoto
 git push origin:bug-123
@@ -198,37 +198,37 @@ Fazendo o rebase entre um o branch bug-123 e o master.
 git checkout experiment
 
 git rebase master
-Mais informações e explicações sobre o Rebasing
+Mais informaï¿½ï¿½es e explicaï¿½ï¿½es sobre o Rebasing
 
 ###Stash
 
-Para alternar entre um branch e outro é necessário fazer o commit das alterações atuais para depois trocar para um outro branch. Se existir a necessidade de realizar a troca sem fazer o commit é possível criar um stash. O Stash como se fosse um branch temporário que contem apenas as alterações ainda não commitadas.
+Para alternar entre um branch e outro ï¿½ necessï¿½rio fazer o commit das alteraï¿½ï¿½es atuais para depois trocar para um outro branch. Se existir a necessidade de realizar a troca sem fazer o commit ï¿½ possï¿½vel criar um stash. O Stash como se fosse um branch temporï¿½rio que contem apenas as alteraï¿½ï¿½es ainda nï¿½o commitadas.
 
 Criar um stash
 git stash
 Listar stashes
 git stash list
-Voltar para o último stash
+Voltar para o ï¿½ltimo stash
 git stash apply
-Voltar para um stash específico
+Voltar para um stash especï¿½fico
 git stash apply stash@{2}
-Onde 2 é o indíce do stash desejado.
+Onde 2 ï¿½ o indï¿½ce do stash desejado.
 
 Criar um branch a partir de um stash
 git stash branch meu_branch
-Reescrevendo o histórico
+Reescrevendo o histï¿½rico
 Alterando mensagens de commit
 git commit --amend -m "Minha nova mensagem"
-Alterar últimos commits
-Alterando os três últimos commits
+Alterar ï¿½ltimos commits
+Alterando os trï¿½s ï¿½ltimos commits
 
 git rebase -i HEAD~3
-O editor de texto será aberto com as linhas representando os três últimos commits.
+O editor de texto serï¿½ aberto com as linhas representando os trï¿½s ï¿½ltimos commits.
 
 pick f7f3f6d changed my name a bit
 pick 310154e updated README formatting and added blame
 pick a5f4a0d added catfile
-Altere para edit os commits que deseja realizar alterações.
+Altere para edit os commits que deseja realizar alteraï¿½ï¿½es.
 
 edit f7f3f6d changed my name a bit
 pick 310154e updated README formatting and added blame
@@ -237,35 +237,35 @@ Feche o editor de texto.
 
 Digite o comando para alterar a mensagem do commit que foi marcado como edit.
 
-git commit –amend -m “Nova mensagem”
-Aplique a alteração
+git commit ï¿½amend -m ï¿½Nova mensagemï¿½
+Aplique a alteraï¿½ï¿½o
 
 git rebase --continue
-Atenção: É possível alterar a ordem dos commits ou remover um commit apenas mudando as linhas ou removendo.
+Atenï¿½ï¿½o: ï¿½ possï¿½vel alterar a ordem dos commits ou remover um commit apenas mudando as linhas ou removendo.
 
-Juntando vários commits
-Seguir os mesmos passos acima, porém marcar os commtis que devem ser juntados com *squash
+Juntando vï¿½rios commits
+Seguir os mesmos passos acima, porï¿½m marcar os commtis que devem ser juntados com *squash
 
-Remover todo histórico de um arquivo
+Remover todo histï¿½rico de um arquivo
 git filter-branch --tree-filter 'rm -f passwords.txt' HEAD
 Bisect
-O bisect (pesquisa binária) é útil para encontrar um commit que esta gerando um bug ou uma inconsistência entre uma sequência de commits.
+O bisect (pesquisa binï¿½ria) ï¿½ ï¿½til para encontrar um commit que esta gerando um bug ou uma inconsistï¿½ncia entre uma sequï¿½ncia de commits.
 
-Iniciar pequinsa binária
+Iniciar pequinsa binï¿½ria
 git bisect start
 Marcar o commit atual como ruim
 git bisect bad
-Marcar o commit de uma tag que esta sem o bug/inconsistência
+Marcar o commit de uma tag que esta sem o bug/inconsistï¿½ncia
 git bisect good vs-1.1
 Marcar o commit como bom
-O GIT irá navegar entre os commits para ajudar a indentificar o commit que esta com o problema. Se o commit atual não estiver quebrado, então é necessário marca-lo como bom.
+O GIT irï¿½ navegar entre os commits para ajudar a indentificar o commit que esta com o problema. Se o commit atual nï¿½o estiver quebrado, entï¿½o ï¿½ necessï¿½rio marca-lo como bom.
 
 git bisect good
 Marcar o commit como ruim
-Se o commit estiver com o problema, então ele deverá ser marcado como ruim.
+Se o commit estiver com o problema, entï¿½o ele deverï¿½ ser marcado como ruim.
 
 git bisect bad
-Finalizar a pesquisa binária
+Finalizar a pesquisa binï¿½ria
 Depois de encontrar o commit com problema, para retornar para o HEAD utilize:
 
 git bisect reset
