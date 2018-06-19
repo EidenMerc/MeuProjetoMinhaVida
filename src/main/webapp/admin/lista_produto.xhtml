@@ -5,7 +5,7 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	template="/templates/template.xhtml">
+	template="/templates/templatecontrole.xhtml">
 	<br></br>
 	<h:head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -13,7 +13,7 @@
 		<title>Lista de Produtos</title>
 	</h:head>
 	<h:body>
-		<h:form prependId="false">
+		<h:form>
 			<div align="center">
 				<p:commandButton value="Inserir"
 					action="#{produtoCtrl.actionInserir}" />
@@ -41,7 +41,7 @@
 							<f:setPropertyActionListener value="#{produto}"
 								target="#{produtoCtrl.produto}" />
 						</p:commandButton>
-						<p:commandButton value="Excluir" update="dataTableProduto"
+						<p:commandButton value="Excluir" update="@form"
 							action="#{produtoCtrl.actionExcluir(produto)}">
 						</p:commandButton>
 					</p:column>

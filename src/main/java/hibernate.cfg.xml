@@ -26,5 +26,7 @@
 		<mapping class="beans.Pessoa" />
 		<mapping class="beans.Fone" />
 		<mapping class="beans.FormaPgto" />
+		<mapping class="beans.Itens_pedido"/>
+		<mapping class="beans.Pedido"/>
 	</session-factory>
 </hibernate-configuration>

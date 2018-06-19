@@ -5,10 +5,10 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	template="/templates/template.xhtml">
+	template="/templates/templatecontrole.xhtml">
 	<br></br>
 	<body>
-		<h:form id="CadProd">
+		<h:form>
 
 			
 			<p:panel header="Cadastro de Produtos" enctype="multipart/form-data">
@@ -47,7 +47,7 @@
 				<p:commandButton value="Salvar Produto"
 					action="#{produtoCtrl.actionGravar}" ajax="false"
 					icon="ui-icon-check" validateClient="true"
-					style="margin-right:10px" />
+					style="margin-right:10px" update="@form"/>
 
 			</p:panel>
 			<br></br>

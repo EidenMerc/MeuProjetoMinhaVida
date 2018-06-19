@@ -5,7 +5,7 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	template="/templates/templatecarrinho.xhtml">
+	template="/templates/template.xhtml">
 
 	<h:head>
 
@@ -14,10 +14,10 @@
 	<h:body>
 
 		<h:form id="carim" prependId="false">
-			<div align="center">
+			<div align="center" >
 				<p:panel id="tot">
 
-					<f:facet name="header">
+					<f:facet name="header" >
            						Produtos do Carrinho
 						<p:spacer width="30" height="10" />
 						<p:spacer width="30" height="10" />
@@ -34,10 +34,8 @@
 					</p:column>
 
 					<p:column headerText="Quantidade ">
-						<p:selectOneMenu id="quantidade" style="width:80px"
-							value="#{item.ipe_qtde}">
-							<p:ajax listener="#{carrinhoCtrl.calcQuantidadeProduto(item)}"
-								update="tot subt" />
+						<p:selectOneMenu id="quantidade" style="width:80px" value="#{item.ipe_qtde}">
+							<p:ajax listener="#{carrinhoCtrl.calcQuantidadeProduto(item)}" update="tot subt"/>
 							<f:selectItem itemLabel="1" itemValue="1" />
 							<f:selectItem itemLabel="2" itemValue="2" />
 							<f:selectItem itemLabel="3" itemValue="3" />
@@ -58,21 +56,21 @@
 					</p:column>
 
 					<p:column headerText="Subtotal">
-						<h:outputText value="#{item.ipe_subtotal}" id="subt" />
+						<h:outputText value="#{item.ipe_subtotal}"  id="subt" />
 					</p:column>
 
 					<p:column headerText="Ações">
 					</p:column>
 
 				</p:dataTable>
-				<h:form>
-					<p:growl id="growl" life="2000" />
-					<p:commandButton value="Finalizar Compra" id="ajax" update="growl"
-						actionListener="#{msgCtrl.buttonAction}"
-						styleClass="ui-priority-primary" />
+				<p:commandButton value="Finalizar Pedido" icon="icon-novo"
+					action="#{carrinhoCtrl.actionPedido}" update="@form" />
+				<p:growl id="messages" showDetail="true" />
 
+				<p:commandButton value="actionRetornar" update="@form"
+					action="#{carrinhoCtrl.actionRetornar(item)}">
 
-				</h:form>
+				</p:commandButton>
 
 				<p:outputLabel for="formaDePagamento" value="Forma de Pagamento" />
 				<p:selectOneMenu id="formaDePagamento"

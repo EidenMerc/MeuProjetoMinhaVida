@@ -5,7 +5,7 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	template="/templates/template.xhtml">
+	template="/templates/templatecontrole.xhtml">
 	<br></br>
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -58,7 +58,7 @@
 				</p:column>
 
 				<p:column headerText="Ações">
-					<p:commandButton value="Alterar" action="/publico/form_cadusuario">
+					<p:commandButton value="Alterar" action="/admin/form_cadusuario">
 						<f:setPropertyActionListener value="#{pessoa}"
 							target="#{pessoaCtrl.pessoa}" />
 					</p:commandButton>

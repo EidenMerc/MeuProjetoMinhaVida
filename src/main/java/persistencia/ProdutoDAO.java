@@ -53,22 +53,5 @@ public class ProdutoDAO implements Serializable {
 		return lista;
 	}
 	
-/*	public Produto merge(Produto produto) {
-		Session sessao = HibernateUtil.getSessionfactory().openSession();
-		Transaction transacao = null;
-		
-		try {
-			transacao = sessao.beginTransaction();
-			Produto retorno = (Produto) sessao.merge(produto);
-			transacao.commit();
-			return retorno;
-		}catch(RuntimeException erro) {
-			if(transacao != null) {
-				transacao.rollback();
-			}
-			throw erro;
-		}finally {
-			sessao.close();
-		}
-	}*/
+
 }

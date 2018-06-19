@@ -7,36 +7,38 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 <h:head>
 
-
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<link href="../css/template.css" rel="stylesheet" type="text/css"></link>
 	<img src="../resources/imagens/loja.png" alt="lojavirtual"></img>
 
 	<form class="pesquisa">
-		<input type="search" id="texto" placeholder="Buscar..." /> <a
-			href="../publico/index.xhtml"><img
-			src="../resources/imagens/lupa.png" class="btn" /></a>
+		<input type="search" id="texto" placeholder="Buscar..." /> <img
+			src="../resources/imagens/lupa.png" class="btn" />
 
 
 	</form>
 
 	<div id="carrinhocompras">
-		<a href="../publico/Carrinho.xhtml"><img
+		<a href="../admin/Carrinho.xhtml"><img
 			src="../resources/imagens/carrinhocompras.png" width="50" height="50"></img></a>
 	</div>
+	<h:outputLink value="../j_spring_security_logout">
+		<h:outputText value="LOGOUT" class="btn-login" />
+	</h:outputLink>
 
-	<a href="../publico/login.xhtml" class="btn-login">LOGIN</a>
 
 </h:head>
-
 
 <h:body>
 	<br></br>
 
 
 	<div class="navbar">
-		<a href="../publico/index.xhtml">Home</a>
-
+		<a href="../publico/index.xhtml">Home</a> <a
+			href="../admin/lista_produto.xhtml">Lista de Produtos</a> <a
+			href="../admin/lista_pessoa.xhtml">Lista de Usuários</a> <a
+			href="../admin/form_produto.xhtml">Cadastro de Produtos</a> <a
+			href="../publico/form_cadusuario.xhtml">Cadastro de Usuários</a>
 	</div>
 
 	<hr

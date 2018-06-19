@@ -32,7 +32,7 @@ public class Pedido {
 	
 	@ManyToOne
 	@JoinColumn(name = "fpg_id")
-	private FormaPgto fpg_id;
+	private FormaPgto fpg_id = new FormaPgto();
 	
 	@Column(name = "ped_dataemissao")
 	private Date ped_dataemissao;

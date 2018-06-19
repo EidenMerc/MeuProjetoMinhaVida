@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/template.xhtml">
+
+	<h:head>
+		<link href="../css/home.css" rel="stylesheet" type="text/css"></link>
+
+	</h:head>
+
+	<h:body>
+	
+		<div align="center">
+
+			<h:form id="form">
+				<p:dataGrid var="car" value="#{produtoCtrl.listagem}" columns="3"
+					cellpadding="3">
+					<!-- a parte de baixo da nome as sub-tabelas -->
+
+
+					<h:panelGrid columns="3">
+
+						<p:graphicImage class="container-imagem"
+							value="/resources/imagens/#{car.caminho}.jpg" />
+					</h:panelGrid>
+				
+					<p:panelGrid>
+						<p:outputLabel value="Produto: " />
+						<h:outputText value="#{car.nome}" />
+					</p:panelGrid>
+					<br />
+					<p:panelGrid>
+						<p:outputLabel value="Preço: R$" />
+						<h:outputText value="#{car.preco}" />
+					</p:panelGrid>
+					<br />
+					<p:panelGrid>
+						<p:outputLabel value="Codigo: " />
+						<h:outputText value="#{car.id}" />
+					</p:panelGrid>
+					<br/>
+					<p:scrollPanel style="width:450px;height:125px;color:#0B3861;border:none;">
+						<h:outputText value="#{car.descricaoproduto}"/>
+					</p:scrollPanel>
+					
+					
+					<div class="btn-carrinho">
+						<p:commandButton class="btn-clickcarrinho" update=":form:carDetail" actionListener="#{carrinhoCtrl.addCarrinho(car)}" title="COMPRAR">
+						</p:commandButton>
+					</div>
+				
+					
+
+				</p:dataGrid>
+
+				<p:outputPanel id="carDetail" style="text-align:center;">
+
+				</p:outputPanel>
+			</h:form>
+
+			<br></br> <br></br> <br></br> <br></br>
+
+
+
+		</div>
+		<footer style="text-align:center;">
+		<h5>Virtual Store 2.0</h5>
+		<h6>©2016 Todos os direitos reservados.</h6>
+		 </footer>
+	</h:body>
+
+</ui:decorate>

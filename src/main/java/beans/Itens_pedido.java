@@ -1,5 +1,7 @@
 package beans;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -37,17 +39,13 @@ public class Itens_pedido {
 	@Column(name = "ipe_subtotal")
 	private double ipe_subtotal;
 
-	@Column(name = "qtdCarrinho")
-	private int qtdCarrinho = 1;
+
 
 	@Column(name = "count")
 	private static int count = 0;
 
-	@Column(name = "quantidade")
-	private Integer quantidade;
-
 	public Itens_pedido(int ipe_id, Pedido ped_id, Produto pro_id, double ipe_qtde, double ipe_valorunit,
-			double ipe_subtotal, int qtdCarrinho, Integer quantidade) {
+			double ipe_subtotal) {
 		super();
 		this.ipe_id = ipe_id;
 		this.ped_id = ped_id;
@@ -55,12 +53,10 @@ public class Itens_pedido {
 		this.ipe_qtde = ipe_qtde;
 		this.ipe_valorunit = ipe_valorunit;
 		this.ipe_subtotal = ipe_subtotal;
-		this.qtdCarrinho = qtdCarrinho;
-		this.quantidade = quantidade;
+
 	}
 
 	public Itens_pedido() {
-		this.ipe_id = count++;
 	}
 
 	public int getIpe_id() {
@@ -95,30 +91,6 @@ public class Itens_pedido {
 		this.ipe_subtotal = ipe_subtotal;
 	}
 
-	public int getQtdCarrinho() {
-		return qtdCarrinho;
-	}
-
-	public void setQtdCarrinho(int qtdCarrinho) {
-		this.qtdCarrinho = qtdCarrinho;
-	}
-
-	public Integer getQuantidade() {
-		return quantidade;
-	}
-
-	public void setQuantidade(Integer quantidade) {
-		this.quantidade = quantidade;
-	}
-
-	public void incrementaEstoque() {
-		this.quantidade++;
-	}
-
-	public void diminuiEstoque() {
-		this.quantidade--;
-	}
-
 	public Pedido getPed_id() {
 		return ped_id;
 	}
@@ -134,5 +106,6 @@ public class Itens_pedido {
 	public void setPro_id(Produto pro_id) {
 		this.pro_id = pro_id;
 	}
+
 
 }

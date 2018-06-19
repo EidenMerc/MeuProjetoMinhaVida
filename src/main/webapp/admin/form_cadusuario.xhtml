@@ -5,7 +5,7 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	template="/templates/templateCad.xhtml">
+	template="/templates/templatecontrole.xhtml">
 	<br></br>
 	<h:head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -90,6 +90,9 @@
 					<p:outputLabel value="Tipo" />
 					<h:selectOneMenu id="tipo" value="#{pessoaCtrl.pessoa.tipo}">
 						<f:selectItem itemLabel="CLIENTE" itemValue="ROLE_CLIENTE" />
+						<f:selectItem itemLabel="ADMINISTRADOR"
+							itemValue="ROLE_ADMINISTRADOR" />
+
 					</h:selectOneMenu>
 
 				</p:panelGrid>

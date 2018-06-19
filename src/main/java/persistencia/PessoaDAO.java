@@ -9,8 +9,8 @@ import org.hibernate.Transaction;
 
 import beans.Pessoa;
 
-public class PessoaDAO implements Serializable{
-	
+public class PessoaDAO implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
 	public static void inserir(Pessoa pessoa) {
@@ -28,7 +28,7 @@ public class PessoaDAO implements Serializable{
 		t.commit();
 		sessao.close();
 	}
-	
+
 	public static void excluir(Pessoa pessoa) {
 		Session sessao = HibernateUtil.getSessionfactory().openSession();
 		Transaction t = sessao.beginTransaction();
@@ -36,20 +36,31 @@ public class PessoaDAO implements Serializable{
 		t.commit();
 		sessao.close();
 	}
-	
+
 	public static List<Pessoa> listagem(String filtro) {
 		Session sessao = HibernateUtil.getSessionfactory().openSession();
 		Query consulta;
-		if(filtro.trim().length() == 0){
+		if (filtro.trim().length() == 0) {
 			consulta = sessao.createQuery("from Pessoa order by pes_nome");
 		} else {
-			consulta = sessao.createQuery("from Pessoa "
-					+ "where pes_nome like :parametro order by pes_nome");
+			consulta = sessao.createQuery("from Pessoa " + "where pes_nome like :parametro order by pes_nome");
 			consulta.setString("parametro", "%" + filtro + "%");
 		}
 		List<Pessoa> lista = consulta.list();
 		sessao.close();
 		return lista;
+	}
+
+	public static Pessoa buscarPorEmail(String emailDoUsuarioLogado) {
+		Session sessao = HibernateUtil.getSessionfactory().openSession();
+		Query consulta;
+
+		consulta = sessao.createQuery("from Pessoa where pes_email = :parametro order by pes_email");
+		consulta.setString("parametro", emailDoUsuarioLogado);
+
+		Pessoa p = (Pessoa) consulta.uniqueResult();
+		sessao.close();
+		return p;
 	}
 
 }

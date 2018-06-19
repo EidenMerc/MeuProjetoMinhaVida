@@ -19,6 +19,7 @@ public class FormaPgtoDAO implements Serializable {
 		sessao.save(formaPgto);
 		t.commit();
 		sessao.close();
+		
 	}
 
 	public static void alterar(FormaPgto formaPgto) {
@@ -44,7 +45,7 @@ public class FormaPgtoDAO implements Serializable {
 			consulta = sessao.createQuery("from FormaPgto order by fpg_descricao");
 		} else {
 			consulta = sessao
-					.createQuery("from FormaPgto " + "where fpg_descricao like :parametro order by fpg_descricao");
+					.createQuery("from FormaPgto " + "where fpg_descricao = parametro order by fpg_descricao");
 			consulta.setString("parametro", "%" + filtro + "%");
 		}
 		List<FormaPgto> lista = consulta.list();
@@ -55,9 +56,10 @@ public class FormaPgtoDAO implements Serializable {
 	public static FormaPgto pesqId(int valor) {
 		Session sessao = HibernateUtil.getSessionfactory().openSession();
 		Query consulta = sessao.createQuery("from FormaPgto where fpg_id = :parametro");
-consulta.setInteger("parametro", valor);
-sessao.close();
-		return (FormaPgto) consulta.uniqueResult();
+		consulta.setInteger("parametro", valor);
+		FormaPgto forma = (FormaPgto) consulta.uniqueResult();
+		sessao.close();
+		return forma;
 	}
 
 }

@@ -15,6 +15,8 @@
     <res-type>javax.sql.DataSource</res-type>
     <res-auth>Container</res-auth>
   </resource-ref>
+  
+  <!--  Spring Security -->
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>
@@ -33,6 +35,8 @@
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
+  
+  
   <servlet>
     <servlet-name>Faces Servlet</servlet-name>
     <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
@@ -42,6 +46,8 @@
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>*.xhtml</url-pattern>
   </servlet-mapping>
+  
+  <!-- Configuração do Tema -->
   <!-- 
   <context-param>
 	<param-name>primefaces.THEME</param-name>
